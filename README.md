@@ -7,6 +7,7 @@ This is project is was created as a part of the Udacity Front End Developer Nano
 ## Overview
 <ul>
   <li>Setting up Webpack</li>
+  <li>Setting up Node and Express</li>
   <li>Webpack Loaders and Plugins</li>
   <li>Sass setup and styles</li>
   <li>Creating Development and Production Modes</li>
