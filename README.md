@@ -1,29 +1,50 @@
-# Webbpack Express Example App
 
-The goal of this repo is be an example of a basic but functional app built on Express and Webpack.
+<h1>Natural Language Processing Project</h1>
+This project is a web tool that allows users to run Natural Language Processing (NLP) on articles or blogs found on other websites.
+This is project is was created as a part of the Udacity Front End Developer Nanodegree program.
 
-If you want to follow along, start from branch 0-initial-setup. Each branch in this project is a step along the path to creating a fully functional webpack setup. In each branch, there will be a documentation file that lists out the steps taken in that branch (each step is also roughly a git commit if you look at the history) which you can use as a checklist when setting up your own projects. 
 
-## What we will cover
+## Overview
+<ul>
+  <li>Setting up Webpack</li>
+  <li>Setting up Node and Express</li>
+  <li>Webpack Loaders and Plugins</li>
+  <li>Sass setup and styles</li>
+  <li>Creating Development and Production Modes</li>
+  <li>Creating Service Workers</li>
+  <li>Using APIs to create requests from external URLS</li>
+  <li>Style and webpage design</li>
+</ul>
 
-We will cover:
+# Libraries
+<a href="https://www.meaningcloud.com/developer/sentiment-analysis">Meanig Cloud Sentiment Analysis API</a>
 
-- Webpack entry point
-- Webpack output and dist folder
-- Webpack Loaders
-- Webpack Plugins
-- Webpack Mode
-- Tools for convenient Webpack development
-
-## Get Up and Running
-
-Fork this repo, then clone the branch of your choice from your forked repo down to your computer:
-
+## Installing and Running Project
+To run this app you need to registar at Meaning Cloud and generate you own API Key. 
+Then, create .env file in the root directory and add the API to .env file
 ```
-git clone -- git@github.com:[your-user-name]/webpack-express.git --
+API_KEY="YOUR API KEY"
 ```
 
-`cd` into your new folder and run:
-- ```npm install```
-- ```npm start``` to start the app
-- this app runs on localhost:8080, but you can of course edit that in server.js
+To install packages:
+``` 
+npm install
+```
+To check dependencies for the project see "package.json" file
+
+Run development server:
+```
+npm run build-dev
+```
+Run Production build:
+```
+npm run build-prod
+```
+To start the server:
+```
+npm run start
+```
+To test project using Jest:
+```
+npm run test
+```
