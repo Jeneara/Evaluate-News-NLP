@@ -1,8 +1,5 @@
-# Webbpack Express Example App
 
-The goal of this repo is be an example of a basic but functional app built on Express and Webpack.
 
-If you want to follow along, start from branch 0-initial-setup. Each branch in this project is a step along the path to creating a fully functional webpack setup. In each branch, there will be a documentation file that lists out the steps taken in that branch (each step is also roughly a git commit if you look at the history) which you can use as a checklist when setting up your own projects. 
 
 ## What we will cover
 
@@ -15,15 +12,33 @@ We will cover:
 - Webpack Mode
 - Tools for convenient Webpack development
 
-## Get Up and Running
+## Installing and Running Project
 
-Fork this repo, then clone the branch of your choice from your forked repo down to your computer:
-
+To run this app you need to registar at Meaning Cloud and generate you own API Key. 
+Then, create .env file in the root directory and add the API to .env file
 ```
-git clone -- git@github.com:[your-user-name]/webpack-express.git --
+API_KEY="YOUR API KEY"
 ```
 
-`cd` into your new folder and run:
-- ```npm install```
-- ```npm start``` to start the app
-- this app runs on localhost:8080, but you can of course edit that in server.js
+To install packages:
+``` 
+npm install
+```
+To check dependencies for the project see "package.json" file
+
+Run development server:
+```
+npm run build-dev
+```
+Run Production build:
+```
+npm run build-prod
+```
+To start the server:
+```
+npm run start
+```
+To test project using Jest:
+```
+npm run test
+```
