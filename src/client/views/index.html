@@ -1,51 +1,61 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>Test</title>
-    </head>
 
-    <body>
+<head>
+    <meta charset="utf-8">
+    <title>Evaluate a News Article with Natural Language Processing</title>
+</head>
 
-        <header>
-            <div class="">
-                Logo
-            </div>
-            <div class="">
-                navigation
-            </div>
-        </header>
+<body>
 
-        <main>
+    <header>
+        <div class="">
+            <h1>Evaluate a News Article with Natural Language Processing</h1>
+        </div>
+
+    </header>
+
+    <main>
+        <section>
+            <form class="" onsubmit="return Client.handleSubmit(event)">
+                <input id="name" type="text" name="input" value=""
+                    placeholder="Please enter a URL to an article or blog here:">
+                <input type="submit" id="submit" name="" value="Analyse" onclick="return Client.handleSubmit(event)"
+                    onsubmit="return handleSubmit(event)">
+            </form>
             <section>
-                <form class="" onsubmit="return Client.handleSubmit(event)">
-                    <input id="name" type="text" name="input" value=""  placeholder="Please enter a URL to an article or blog here:">
-                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
-                </form>
-            <section>
 
-            <section>
-                <strong><div id="results">Form Results:</div></strong>
-                <div id="model"></div>
-                <div id="score"></div>
-                <div id="agreement"></div>
-                <div id="subject"></div>
-                <div id="confidence"></div>
-                <div id="irony"></div>
-            </section>
-        </main>
+                <section id="evalResults">
+                    <div id="results">
+                        <strong>
+                            <h2>Evaluation Results:</h2>
+                        </strong>
+                    </div>
+                    <div id="apiData">
+                        <div id="model"></div>
+                        <div id="scoreTag"></div>
+                        <div id="agreement"></div>
+                        <div id="subject"></div>
+                        <div id="confidence"></div>
+                        <div id="irony"></div>
+                    </div>
+                </section>
+    </main>
 
-        <footer>
-            <p>This is a footer</p>
-        </footer>
-        <script>
-            // Check that service workers are supported
-            if ('serviceWorker' in navigator) {
-                // Use the window load event to keep the page load performant
-                window.addEventListener('load', () => {
-                    navigator.serviceWorker.register('/service-worker.js');
-                });
-            }
-           </script>
-    </body>
+    <footer>
+        <h3>Developed using the Meaning Cloud API</h3>
+        <h3>@Copyright Stephanie Mason 2021</h3>
+
+    </footer>
+    <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script>
+</body>
+
 </html>

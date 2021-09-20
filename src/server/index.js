@@ -9,6 +9,8 @@ const fetch = require("node-fetch");
 dotenv.config();
 const api_key = process.env.API_KEY;
 
+const baseUrl = "https://api.meaningcloud.com/sentiment-2.1?key=";
+
 // Start up an instance of app
 const app = express()
 
@@ -51,14 +53,14 @@ app.get('/test', function (req, res) {
 app.post('/userText', async (req, res) => {
     console.log('req.body ===+>', req.body)
     //Fetch
-    const response = await fetch(`https://api.meaningcloud.com/sentiment-2.1?key=${api_key}&url=${req.body.formText}&lang=en`)
-        .then(response => ({
-            status: response.status,
-            body: response.json()
-        }))
-        .then(({
-            status,
-            body
-        }) => console.log(status, body))
-        .catch(error => console.log('error', error));
+    const response = await fetch(`${baseUrl}${api_key}&url=${req.body.formText}&lang=en`, {
+        methond: 'POST'
+    });
+    try {
+        const data = await response.json();
+        console.log(data);
+        res.send(data);
+    } catch (error) {
+        console.log('error', error);
+    }
 });
