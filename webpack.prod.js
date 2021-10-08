@@ -13,6 +13,8 @@ module.exports = {
         libraryTarget: 'var',
         library: 'Client'
     },
+    optimization: {
+        minimizer: [new TerserPlugin({}), new OptimizeCSSAssetsPlugin({})],
     module: {
         rules: [{
                 test: '/\.js$/',
